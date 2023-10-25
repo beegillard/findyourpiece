@@ -33,9 +33,11 @@ const createCustomer = (req, res) => {
     })
 };
 
-
+/*
 module.exports = {
     getCustomers,
     getCustomerById,
     createCustomer
 };
+
+*/

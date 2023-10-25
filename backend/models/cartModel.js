@@ -31,6 +31,10 @@ const getCarts = (req, res) => {
        })
    };
 
+   const newCart = (req, res) => {
+    db.query("INSERT INTO carts ")
+   }
+
 //    const addItemToCart = (req, res) => {
 //     db.query("")
 //    }

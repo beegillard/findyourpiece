@@ -12,10 +12,16 @@ const app = express();
 
 app.use(cors());
 
+app.set("trust proxy", 1);
+
 app.use(session({
     secret: SESSION_SECRET,
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    cookie: {
+        secure: false,
+        maxAge: 24 * 60 * 60 * 1000
+    }
   }));
 
 
@@ -32,6 +38,6 @@ app.get('/', (req, res) => {
 
 
 app.listen(PORT, () => {
-    console.log(`App running on port ${PORT} ${SESSION_SECRET}`);
+    console.log(`App running on port ${PORT}`);
 })
  
